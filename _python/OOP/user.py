@@ -25,11 +25,15 @@ class User():
     def make_deposit(self, amount):
         self.account_balance += amount
         return self
+    
+    def add_intrest(self, amount):
+        self.account_balance += amount
+        return self
 
     def display_user_balance(self):      
         print("user: " + self.name + ", Balance: $" + str(self.account_balance))
 
-
+    
 Veries = User("Veries", "veries@me.com")
 Veries.make_deposit(4000)
 Veries.make_deposit(2000)
