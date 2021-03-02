@@ -1,69 +1,81 @@
+# Users with Bank Account
+# ---------------------------------------------------------------------|
+# User
 
-# Create Parent Class: User
+class User:
 
-# ------------------------------------------------------------------------------------|
-class User():
-    def __init__(self, name, age, gender):
+    def __init__(self, name, email):
         self.name = name
-        self.age = age
-        self.gender = gender
+        self.email = email
+        self.accounts = {}
 
-# Method for User
-# ------------------------------------------------------------------------------------|
+# ------------------------------------------------------------------|
+# calling the functions for the accounts
 
-    def show_details(self):
-        print ("Persoanl Details")
-        print ("")
-        print ("Name", self.name)
-        print ("Age", self.age)
-        print ("Gender", self.gender)
-
-# Create Child Class: Bank
-# We use inheritance here. It will inherite the information from our user class to the Bank Class.  
-# ------------------------------------------------------------------------------------|
-
-class Bank(User):
-    def __init__(self, name,  age, gender):
-        # We will use a super function to use all of the details already created to keep from having to
-        # recode it.
-        # ----------------------------------------------------------------------------|
-        super().__init__(name, age , gender)
+    def create_account(self, name, amount, int_rate):
+        self.accounts[name]=BankAccount(int_rate, amount)
+        print(f'Account {name} successfully created')
+        self.accounts[name].display_account_info()
+    
+    def deposit(self, amount, account_name):
+        self.acounts[account_name].deposit(amount)
         
-        # details about the account balance. The balance should start a 0
-        # ----------------------------------------------------------------------------|
-        self.balance = 0
+    def withdraw(self, amount, account_name):
+        self.acounts[account_name].withdraw(amount)
         
-        # Deposit
-        # ----------------------------------------------------------------------------|
-        def deposit(self, amount):
-            self.amount = amount
-            self.balance = self.balance + self.amount
-            print("Account balance has been updated : $", self.balance)
-            
-        # Withdrawal
-        # ----------------------------------------------------------------------------|
-        def withdraw(self, amount):
-            self.amount = amount
-            
-            # Adding a self check feature to check for over drawing the amount in the account
-            # using a conditional statement
-            # ------------------------------------------------------------------------|
-            if self.amount > self.balance:
-                print("Insufficient Funds | Balance Availble : $", self.balance)
-            else:
-                self.balance = self.balance - self.amount
-                print("Account balance has been updated : $", self.balance)
-                
-        # View Account Balance
-        # ----------------------------------------------------------------------------|
+
+# ------------------------------------------------------------------|
+# Printing everything inthe functions by using a for-loop
+    def print_info(self):
+        print(self.name)
+        print(self.email)
+        for account_name, account in self.accounts.items():
+            accounts.display_account_info()
         
-        def view_balance(self):
-            self.show_details()
-            print("Account balance: $", self.balance)
-                
-                
-            
-         
+
+# ---------------------------------------------------------------------|
+# Create Bank Account Class (Functionality)
+
+class BankAccount:
+    def __init__(self, int_rate, balance = 0):      
+        self.int_rate = int_rate
+        self.balance = balance
+        
+    def make_deposit(self, amount):
+        self.balance += amount
+        return self
+        
+    def make_withdrawal(self, amount):
+        if(self.balance < amount):
+            print("Insuffienct Funds")
+            self.balance -=5
+        else:
+            self.balance -= amount
+            return self
+        
+    def display_account_info(self): 
+        print("***********************************")
+        print(f'* Balance is: {self.balance} *')
+        print(f'* int_rate is: {self.balance} *')
+        print("***********************************")
+        return self
+        
+    def yield_interest(self):
+        self.balance *= self.int_rate
+        return self
+
+
+# ---------------------------------------------------------------------|
+# Create User 
+Veries = User("Veries", "veries@me.com")
+
+# ---------------------------------------------------------------------|
+# Create Accounts
+Veries.create_account('checking', '500', .01)
+Veries.create_account('savings', '1000', .02)
+
+Veries.print_info()
 
 
 
+ 

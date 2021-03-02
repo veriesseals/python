@@ -11,6 +11,10 @@
 # eg. "User: Guido van Rossum, Balance: $150
 # BONUS: transfer_money(self, other_user, amount) - have this method decrease the user's balance by the amount and add that amount to other other_user's balance
 
+# User
+# ---------------------------------------------------------------------|
+# User
+
 class User():
 
     def __init__(self, name, email_address):
@@ -18,43 +22,49 @@ class User():
         self.email_address = email_address
         self.account_balance = 0
 
+# ---------------------------------------------------------------------|
+# Withdrawal
+
     def make_withdrawal(self, amount):
-        self.account_balance -= amount
-        return self
-    
+        if(self.account_balance < amount):
+            print("Insuffienct Funds")
+            self.account_balance -=5
+        else:
+            self.account_balance -= amount
+            
+# ---------------------------------------------------------------------|
+# Deposit
+ 
     def make_deposit(self, amount):
         self.account_balance += amount
-        return self
-    
-    def add_intrest(self, amount):
-        self.account_balance += amount
-        return self
+        
+# ---------------------------------------------------------------------|
+# Display Balance
 
     def display_user_balance(self):      
         print("user: " + self.name + ", Balance: $" + str(self.account_balance))
 
-    
+# ---------------------------------------------------------------------|
+# Create User 
 Veries = User("Veries", "veries@me.com")
+
+# ---------------------------------------------------------------------|
+# Make Deposit
+
 Veries.make_deposit(4000)
 Veries.make_deposit(2000)
 Veries.make_deposit(300)
+
+# ---------------------------------------------------------------------|
+# Withdrawal
+
 Veries.make_withdrawal(4356.76)
 Veries.display_user_balance()
 
+# ---------------------------------------------------------------------|
+# Other Users with deposits and withdrawals
 
-# Margo = User("Margo", "margo@icloud.com")
-# Margo.make_deposit(8000)
-# Margo.make_deposit(40)
-# Margo.make_withdrawal(1000)
-# Margo.make_withdrawal(34)
-# Margo.display_user_balance()
 
-# Festus = User("Festus", "festus@gmail.com")
-# Festus.make_deposit(500)
-# Festus.make_withdrawal(30)
-# Festus.make_withdrawal(200)
-# Festus.make_withdrawal(58)
-# Festus.display_user_balance()
 
     
 
