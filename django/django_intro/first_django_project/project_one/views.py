@@ -40,6 +40,24 @@ def destroy(request, number):
 
 # Templates
 # ---------------------------------------------------------------------------|
-# Create a Function or Method called destroy
+# Create a Function or Method for rendering templates render must be in the import
+
+def index(request):
+    return render(request, "index.html")
+
+# When we call the render function, our first argument will always be request, 
+# and the second argument will be a string indicating which html file to render.
+
+# Passing data to the template via the render_template method. Rather than being able 
+# to pass up any number of arguments, we can only pass a single dictionary whose keys 
+# will be the variable names available on the template. For example:
+
+def index(request):
+    context = {
+        "name": "Noelle",
+        "favorite_color": "turquoise",
+        "pets": ["Bruce", "Fitz", "Georgie"]
+    }
+    return render(request, "index.html", context)
 
 

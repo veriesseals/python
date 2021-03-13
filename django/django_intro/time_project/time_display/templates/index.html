@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+        {% load static %} <!--added this line-->
+        <link rel="stylesheet"  href= "{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <!-- Wrapper Div -->
+        <div class=wrapper>
+            <!-- Title Div -->
+            <div class=title>
+                <h1>Current Date & Time:</h1>
+            </div>
+            <!-- End of Title Div -->
+            <!-- Clock Div -->
+            <div class=clock>
+                <!-- <h1>GMT</h1> -->
+                <h2>{{time}}</h2>
+            </div>
+            <!-- End of Clock Div -->
+        </div>
+        <!-- End of Wrapper Div -->
+
+    </body>
+</html>
