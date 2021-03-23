@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+        {% load static %} <!--added this line-->
+        <link rel="stylesheet"  href= "{% static 'css/style.css' %}">
+        <script src="{% static 'js/script.js' %}"></script>
+    </head>
+    <body>
+        <!-- We can also access session directly in our Django templates. 
+            Django templates do not process square brackets, so we'll use dot notation instead -->
+        <p>Name in session is: {{request.session.name}}</p>
+    </body>
+</html>

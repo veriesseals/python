@@ -1,0 +1,12 @@
+/* Global Outline for CSS */
+/* ----------------------------------------------------------------------- */
+* {
+    outline: 1px dotted red;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

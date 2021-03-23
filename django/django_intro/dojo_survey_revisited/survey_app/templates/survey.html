@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Dojo Survey (Revisited)</h1>
+    <form action="/survey" method="GET">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input name="name" id="name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="location">Dojo Location:</label>
+            <select id="location" name="location" class="form-control">
+                {% for loc in locations %}
+                <option value="{{ loc }}">{{ loc }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="language">Favorite Language:</label>
+            <select id="language" name="language" class="form-control">
+                {% for lang in languages %}
+                <option value="{{ lang }}">{{ lang }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comment">Comment (optional):</label>
+            <textarea id="comment" name="comment" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

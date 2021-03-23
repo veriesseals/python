@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Coding Dojo Survey</title>
+        {% load static %} <!--added this line-->
+        <link rel="stylesheet"  href= "{% static 'css/style2.css' %}">
+        <script src="{% static 'js/script.js' %}"></script>
+    </head>
+    <body>
+        h1>New Student: </h1>
+        <p>Name: {{name}}, Location: {{loc}}, Language: {{lang}}</p>
+    </body>
+</html>
