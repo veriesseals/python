@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Dojo Survey (Revisited)</h1>
-    <form action="/survey" method="GET">
+    <form action="/survey" method="POST">
         {% csrf_token %}
         <div class="form-group">
             <label for="name">Your Name:</label>

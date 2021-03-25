@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Coding Dojo Survey</title>
-        {% load static %} <!--added this line-->
-        <link rel="stylesheet"  href= "{% static 'css/style2.css' %}">
-        <script src="{% static 'js/script.js' %}"></script>
-    </head>
-    <body>
-        h1>New Student: </h1>
-        <p>Name: {{name}}, Location: {{loc}}, Language: {{lang}}</p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="container">
+        <h2>Subitted Info</h2>
+        <p><span>Name: </span>{{ result.name }}</p>
+        <p><span>Dojo Location: </span>{{ result.location }}</p>
+        <p><span>Favorite Language: </span>{{ result.language }}</p>
+        <p><span>Comment: </span>{{ result.comment }}</p>
+        <a href="/" class="btn btn-primary">Go Back</a>
+    </div>
+</body>
 </html>
