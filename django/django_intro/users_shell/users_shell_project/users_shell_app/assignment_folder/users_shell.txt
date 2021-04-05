@@ -1,0 +1,233 @@
+Last login: Tue Mar 30 15:35:20 on ttys005
+veriesmacbookpro@Veriess-MacBook-Pro ~ % cd volumes/codingdrv
+cd: no such file or directory: volumes/codingdrv
+veriesmacbookpro@Veriess-MacBook-Pro ~ % cd /volumes/codingdrv
+veriesmacbookpro@Veriess-MacBook-Pro codingdrv % ls
+Ark_Server				VA Support Docs
+Coding Trainning			Veries_Personal_Info_Folder
+CodingDojo				WD System Drivers
+Jerralyn				Woz-U_Lessons
+Linda_Seals_DD214.jpeg			WozUPractice
+My_Graphic_Design			camtasia
+My_Personal_Photos			drivers_lic_receipt
+My_Photography				fonts
+My_Video_Editing			resume_building_coding_dojo
+Super Book 1-52 [Complete]		sixteen_candles_ads
+Tyaanah Jean'ee Brumfield Legal Doc's	udemy_coding_trainning
+veriesmacbookpro@Veriess-MacBook-Pro codingdrv % cd codingdojo
+veriesmacbookpro@Veriess-MacBook-Pro codingdojo % ls
+Algorithm Book.pdf			Python_old
+Algorithm_Book_(02-09-2016).pdf		WebFundamentals_Old
+Downloads				Web_Fundamentals_new
+Git					codingdojopractice.code-workspace
+MySQL					math.js
+PreCourse				math.py
+Python_New
+veriesmacbookpro@Veriess-MacBook-Pro codingdojo % cd codingdojo
+cd: no such file or directory: codingdojo
+veriesmacbookpro@Veriess-MacBook-Pro codingdojo % ls
+Algorithm Book.pdf			Python_old
+Algorithm_Book_(02-09-2016).pdf		WebFundamentals_Old
+Downloads				Web_Fundamentals_new
+Git					codingdojopractice.code-workspace
+MySQL					math.js
+PreCourse				math.py
+Python_New
+veriesmacbookpro@Veriess-MacBook-Pro codingdojo % cd python_new
+veriesmacbookpro@Veriess-MacBook-Pro python_new % ls
+assignments	python_notes	python_stack
+veriesmacbookpro@Veriess-MacBook-Pro python_new % ls
+assignments	python_notes	python_stack
+veriesmacbookpro@Veriess-MacBook-Pro python_new % cd python_stack 
+veriesmacbookpro@Veriess-MacBook-Pro python_stack % ls
+_python		django-admin	my_environments
+django		flask		mysql
+veriesmacbookpro@Veriess-MacBook-Pro python_stack % ls
+_python		django-admin	my_environments
+django		flask		mysql
+veriesmacbookpro@Veriess-MacBook-Pro python_stack % ls
+_python		django-admin	my_environments
+django		flask		mysql
+veriesmacbookpro@Veriess-MacBook-Pro python_stack % cd my_environments 
+veriesmacbookpro@Veriess-MacBook-Pro my_environments % ls
+djangoPy3Env	py3Env
+veriesmacbookpro@Veriess-MacBook-Pro my_environments % source djangoPy3Env/bin/activate
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro my_environments % cd ..
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro python_stack % ls
+_python		django-admin	my_environments
+django		flask		mysql
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro python_stack % cd django
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro django % ls
+django_extras		django_fundamentals	django_orm
+django_full_stack	django_intro
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro django % cd django_intro 
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro django_intro % ls
+dojo_survey			ninja_gold
+dojo_survey.zip			ninja_gold.zip
+dojo_survey_revisited		random_word_generator
+dojo_survey_revisited.zip	random_word_generator.zip
+first_django_project		redirect_project
+first_django_project.zip	time_project
+first_project			time_project.zip
+get_vs_post			users_shell
+named_routes
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro django_intro % cd users_shell/users_shell_project 
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % ls
+db.sqlite3		users_shell_app
+manage.py		users_shell_project
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % clear
+
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % ls
+db.sqlite3		manage.py		users_shell_app		users_shell_project
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % python manage.py shell
+Python 3.9.2 (v3.9.2:1a79785e3e, Feb 19 2021, 09:06:10) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from book.models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'book'
+>>> from user.models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'user'
+>>> from User.models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'User'
+>>> from User.models import*
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'User'
+>>> from User.models import*clear
+  File "<console>", line 1
+    from User.models import*clear
+                            ^
+SyntaxError: invalid syntax
+>>> cls
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'cls' is not defined
+>>> 
+KeyboardInterrupt
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> ^D
+now exiting InteractiveConsole...
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % ls
+db.sqlite3		manage.py		users_shell_app		users_shell_project
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % clear
+
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % ls
+db.sqlite3		manage.py		users_shell_app		users_shell_project
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % python manage.py runserver        
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 30, 2021 - 21:38:35
+Django version 2.2, using settings 'users_shell_project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C%                                                                                                                 (djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % from book.models import *
+from: can't read /var/mail/book.models
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % clear
+
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % python manage.py shell
+Python 3.9.2 (v3.9.2:1a79785e3e, Feb 19 2021, 09:06:10) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from book.models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'book'
+>>> from user.models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'user'
+>>> from users.models import *
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'users'
+>>> from users_shell_app.models import *
+>>> ^D
+now exiting InteractiveConsole...
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % clear
+
+(djangoPy3Env) veriesmacbookpro@Veriess-MacBook-Pro users_shell_project % python manage.py shell
+Python 3.9.2 (v3.9.2:1a79785e3e, Feb 19 2021, 09:06:10) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+
+# --------------------------------------------------------------------------------------------------------|
+# imported model by using the app name
+
+>>> from users_shell_app import * (incorrect import missing users_shell_app.models)
+# --------------------------------------------------------------------------------------------------------|
+>>> User.objects.create(first_name = 'Veries', last_name = 'Seals', email_address = 'veries@me.com', age = 44)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'User' is not defined
+>>>  Users.objects.create(first_name = 'Veries', last_name = 'Seals', email_address = 'veries@me.com', age = 44)
+  File "<console>", line 1
+    Users.objects.create(first_name = 'Veries', last_name = 'Seals', email_address = 'veries@me.com', age = 44)
+IndentationError: unexpected indent
+>>> Users.objects.create(first_name ='Veries', last_name='Seals', email_address='veries@me.com', age=44)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Users' is not defined
+>>> User.objects.create(first_name="Veries", last_name="Seals", email_address="veries@me.com", age=44)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'User' is not defined
+>>> from users_shell_app.models
+  File "<console>", line 1
+    from users_shell_app.models
+                               ^
+SyntaxError: invalid syntax
+
+# --------------------------------------------------------------------------------------------------------|
+# imported model by using the app name
+
+>>> from users_shell_app.models import *
+
+# --------------------------------------------------------------------------------------------------------|
+# created 3 objects
+
+>>> User.objects.create(first_name="Veries", last_name="Seals", email_address="veries@me.com", age=44)
+<User: Veries Seals>
+>>> User.objects.create(first_name="Jerrlyn", last_name="Seals", email_address="jerralynseals@gmail.com", age=44)
+<User: Jerrlyn Seals>
+>>> User.objects.create(first_name="Aleceia", last_name="Seals", email_address="aleceia2017@gmail.com", age=22)
+<User: Aleceia Seals>
+>>> User.objects.all()
+<QuerySet [<User: Veries Seals>, <User: Jerrlyn Seals>, <User: Aleceia Seals>]>
+>>>  User.objects.create(first_name="ANya", last_name="Seals", email_address="placeholder@gmail.com", age=16)
+  File "<console>", line 1
+    User.objects.create(first_name="ANya", last_name="Seals", email_address="placeholder@gmail.com", age=16)
+IndentationError: unexpected indent
+>>> User.objects.last()
+<User: Aleceia Seals>
+>>> User.objects.first()
+<User: Veries Seals>
+>>> user_three = User.objects.get(id=3)
+>>> user_three.last_name = "Pancakes"
+>>> user_three.save()
+>>> User.objects.last()
+<User: Aleceia Pancakes>
+>>> user_two = User.objects.get(id=2)
+>>> user_two.delete()
+(1, {'users_shell_app.User': 1})
+>>> User.objects.all()
+<QuerySet [<User: Veries Seals>, <User: Aleceia Pancakes>]>
+>>> User.objects.order_by('first_name')
+<QuerySet [<User: Aleceia Pancakes>, <User: Veries Seals>]>
+>>> user_three.last_name = "Seals"
+>>> User.objects.create(first_name="Jerrlyn", last_name="Seals", email_address="jerralynseals@gmail.com", age=44)
+<User: Jerrlyn Seals>
+>>> User.objects.order_by('-first_name')
+<QuerySet [<User: Veries Seals>, <User: Jerrlyn Seals>, <User: Aleceia Pancakes>]>
+>>> 
