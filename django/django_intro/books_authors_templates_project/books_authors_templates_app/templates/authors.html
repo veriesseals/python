@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <title>Books/Authors - Authors</title>
+</head>
+<body>
+    <nav>
+        <h1>Books & Authors</h1>
+        <a href="/">Books</a>
+        <a href="/authors">Authors</a>
+    </nav>
+    <div class="container">
+        <h1>Add an Author</h1>
+        <section class="split-screen">
+            <form action="/authors/create" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea name="notes" id="notes" class="form-control"></textarea>
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for author in authors %}
+                <tr>
+                    <td>{{ author.id }}</td>
+                    <td>{{ author.full_name }}</td>
+                    <td><a href="/authors/{{ author.id }}">View</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

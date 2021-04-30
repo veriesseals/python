@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojos & Ninjas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left">
+            <section>
+                <h3>Add a New Dojo Location</h3>
+                <form action="/dojos/create" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" name="state" id="state" class="form-control">
+                    </div>
+                    <button class="btn btn-primary">Add</button>
+                </form>
+            </section>
+            <section>
+                <h3>Add a Ninja</h3>
+                <form action="/ninjas/create" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" id="first_name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="dojo">Dojo</label>
+                        <select name="dojo" id="dojo" class="form-control">
+                        {% for dojo in dojos %}
+                            <option value="{{ dojo.id }}">{{ dojo.name }}</option>
+                        {% endfor %}
+                        </select>
+                    </div>
+                    <button class="btn btn-primary">Add</button>
+                </form>
+            </section>
+        </div>
+        <div id="right">
+            <h1>All Available Dojos</h1>
+            {% for dojo in dojos %}
+                <h3>Ninjas at the {{ dojo.name }}</h3>
+                <ul>
+                {% for ninja in dojo.ninjas.all %}
+                    <li>{{ ninja.first_name }} {{ ninja.last_name }}</li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+</body> 
+</html>
