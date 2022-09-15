@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates Project</title>
+
+    <!-- Link to Static Files ------------------------------------------>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- ------------------------------------------------------------ -->
+</head>
+<body>
+    <!-- Link image from Static IMG Folder -->
+    <img src="{% static 'img/django3.png' %}" />
+
+    <h1>Info From Server</h1>
+    <p>Name: {{name}}</p>
+    <p>Color: {{favorite_color}}</p>
+    <p>Pets</p>
+    <!-- create for loop to loop through pets in the array to reender in the unordered list-->
+    <ul>
+        {% for pet in pets %}
+        <li>{{pet}}</li>
+        {%endfor%}
+    </ul>
+<!-- Note: You cannot use square brackets with Django's template engine! Instead, use dot notation. 
+For example, array[0] becomes {{ array.0 }} -->
+
+    
+</body>
+</html>
